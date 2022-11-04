@@ -219,19 +219,16 @@ const MyCart = ({ navigation }) => {
       </View>
     );
   }
-  const handlePutAndDelete = (item) => {
-    for (var i = 0; i < cart.length; i++) {
-      if (cart[i].itemCart.name == item.name) {
-        connect
-          .delete("/Cart/" + item.id)
-          .then(function (res) {
-            console.log("delete item");
-          })
-          .catch(function (error) {
-            Alert.alert(error.message);
-          });
-      }
+  const handlePutAndDelete = () => {
+    const postIdsArray = cart.map((item) => item.id);
+    for (var i = 0; i < postIdsArray.length; i++) {
+      connect
+        .delete("/Cart/" + postIdsArray[i])
+        .then((res) => console.log("delete item" + [i]))
+        .catch((error) => error.message);
     }
+    navigation.replace("Home");
+    Alert.alert("Thank you for purchases");
   };
   const Checkout = () => {
     const [initializing, setInitializing] = useState(true);
@@ -284,7 +281,7 @@ const MyCart = ({ navigation }) => {
           borderRadius: 20,
         }}
         onPress={() => {
-           handlePutAndDelete(cart);
+          handlePutAndDelete();
         }}
       >
         <Text
@@ -299,7 +296,6 @@ const MyCart = ({ navigation }) => {
       </TouchableOpacity>
     );
   };
-  // xóa cart và thêm vào purchases
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.lightGray }}>
       <View
@@ -317,6 +313,8 @@ const MyCart = ({ navigation }) => {
       </View>
       <TouchableOpacity
         style={{
+          width: 50,
+          height: 30,
           position: "absolute",
           left: 20,
           marginTop: 25,
