@@ -1,0 +1,163 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+#header{
+    top:0;
+    width: 100%;
+   
+}
+
+.header1{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+
+}
+.header2 li{ 
+    padding: 10px 150px ;
+display: inline-block;
+}
+
+.header2 li a{
+   color: black;
+   display: block;
+}
+.header2 ul{
+    list-style-type: none;
+text-align: center;
+}
+.header2{
+display: flex;
+border-color: black;
+width: 100%;
+margin: 0;
+border: 1px solid black;
+height: 40px;
+
+}
+a:hover{
+   
+    opacity: 0.6;
+}
+
+
+#slider .img{
+ 
+    max-width: 100%;
+    max-height: 100%;
+   
+}
+
+#slider .slider-a{
+    border: 1px solid black;
+}
+
+#slider .slider1 {
+    padding: 20px;
+}
+#slider .slider1 h2{
+    color:green;
+    font-size: 25px;
+  
+}
+
+#slider .sliderp p{
+   font-weight: 700;
+   margin-right: 5px;
+   margin-left: 5px;
+}
+
+#slider .slider2 {
+    display: flex;
+}
+
+#slider .slider3{
+    margin-top: 10px;
+}
+
+#slider .slider3 h3{
+    padding: 20px;
+    color: green;
+    font-size: 25px;
+   
+}
+
+#content .content1{
+    margin-top: 20px;
+}
+
+table, th, td {
+ 
+    border: 1px solid;
+    text-align: center;
+    margin-top: -4ch;
+  }
+
+table {
+    width : 100%;
+}
+
+#content{
+height: 500px;
+}
+
+#content .content2 h4{
+    padding: 20px;
+    color: green;
+    font-size: 25px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  #footer {
+    height: 40px;
+    padding-left: 700px;
+    padding-top: 10px;
+   width: 100%;
+    background-color: black;
+    color: white;
+    text-align: centers;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    }
+
+    #footer p{
+        margin: auto ;
+    }
+
+    textarea {  width: 100%;  
+        height: 150px;  
+        padding: 12px 20px;  
+        box-sizing: border-box;  
+        border: 2px solid #ccc;  
+        border-radius: 4px;  
+        background-color: #f8f8f8;  
+        resize: none;
+    }
