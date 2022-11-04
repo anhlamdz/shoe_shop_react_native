@@ -37,6 +37,8 @@ const Register = ({ navigation }) => {
       >
         <TouchableOpacity
           style={{
+            width: 50,
+            height: 30,
             position: "absolute",
             left: 20,
             top: "15%",

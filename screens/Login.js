@@ -32,7 +32,6 @@ const Login = () => {
       })
       .catch((error) => alert(error.message));
   };
-
   return (
     <View style={styles.container}>
       <View
@@ -44,6 +43,8 @@ const Login = () => {
       >
         <TouchableOpacity
           style={{
+            width: 50,
+            height: 30,
             position: "absolute",
             left: 20,
             top: "10%",
@@ -104,6 +105,7 @@ const Login = () => {
         </View>
         <TouchableOpacity
           style={{ position: "absolute", top: "40%", right: "10%" }}
+          onPress={() => navigation.navigate("ForgetPassword")}
         >
           <Text>Forgot Password</Text>
         </TouchableOpacity>

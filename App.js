@@ -2,7 +2,14 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import Tabs from "./navigation/tabs";
-import { Product, MyCart, Register, Login } from "./screens";
+import {
+  Product,
+  MyCart,
+  Register,
+  Login,
+  MyPurchases,
+  ForgetPassword,
+} from "./screens";
 
 const theme = {
   ...DefaultTheme,
@@ -28,6 +35,8 @@ const App = () => {
         <Stack.Screen name="MyCart" component={MyCart} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="MyPurchases" component={MyPurchases} />
+        <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
       </Stack.Navigator>
     </NavigationContainer>
   );

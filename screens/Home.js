@@ -80,8 +80,6 @@ const Home = ({ navigation }) => {
     // setSelectedShoes(selectedShoes1)
 
     let selectedShoes = tabs.filter((a) => a.id == selectedTab);
-
-    // console.log("haha",selectedShoes);
     if (selectedShoes.length > 0) {
       shoes = selectedShoes[0].shoe;
     }

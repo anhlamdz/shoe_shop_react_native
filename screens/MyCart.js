@@ -220,6 +220,18 @@ const MyCart = ({ navigation }) => {
     );
   }
   const handlePutAndDelete = () => {
+    const isUser = [...user];
+    const index = isUser.find(
+      (data) => data.email.toLowerCase() === auth.currentUser?.email
+    );
+    var order = {
+      ...index,
+      shoe: [...cart],
+    };
+    connect
+      .put("/User/" + index.id, order)
+      .then((res) => console.log(order))
+      .catch((err) => err.message);
     const postIdsArray = cart.map((item) => item.id);
     for (var i = 0; i < postIdsArray.length; i++) {
       connect

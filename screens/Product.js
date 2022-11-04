@@ -153,10 +153,13 @@ const Product = ({ route, navigation }) => {
             {renderInfoShoe()}
             <TouchableOpacity
               style={{
-                marginLeft: 20,
+                width: 50,
+                height: 30,
+                marginLeft: 10,
                 borderRadius: 15,
                 position: "absolute",
                 top: "3%",
+                alignItems: "center",
               }}
               onPress={() => navigation.goBack()}
             >

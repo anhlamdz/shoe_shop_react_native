@@ -182,12 +182,12 @@ const Catalog = ({ navigation }) => {
                 }}
               >
                 <Image
-                  source={selectedItem.img}
+                  source={{ uri: selectedItem.img[0] }}
                   resizeMode="contain"
                   style={{
                     width: "90%",
                     height: 170,
-                    transform: [{ rotate: "-15deg" }],
+                    transform: [{ rotate: "-10deg" }],
                   }}
                 />
               </View>

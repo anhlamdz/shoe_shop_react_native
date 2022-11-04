@@ -1,13 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  Button,
-} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { COLORS, SIZES, icons } from "../constant";
 import { auth } from "./firebase";
 
@@ -87,36 +80,6 @@ const Me = () => {
             </View>
           </View>
         </View>
-        <View style={{ flex: 1 }}>
-          <View style={{ borderBottomWidth: 1, height: "10%" }}>
-            <TouchableOpacity
-              style={{
-                justifyContent: "space-between",
-                flexDirection: "row",
-                marginHorizontal: 20,
-                marginTop: 15,
-              }}
-              activeOpacity="0.5"
-            >
-              <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-                My Purchases
-              </Text>
-              <Text style={{ fontSize: 16 }}>View Purchases History</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={{ height: "10%" }}>
-            <TouchableOpacity
-              style={{
-                flexDirection: "row",
-                marginHorizontal: 20,
-                marginTop: 15,
-              }}
-              activeOpacity="0.5"
-            >
-              <Text style={{ fontSize: 20, fontWeight: "bold" }}>Account</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
       </View>
     );
   }
@@ -177,6 +140,7 @@ const Me = () => {
               marginTop: 15,
             }}
             activeOpacity="0.5"
+            onPress={() => navigation.navigate("MyPurchases")}
           >
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>
               My Purchases
@@ -193,7 +157,9 @@ const Me = () => {
             }}
             activeOpacity="0.5"
           >
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>Account</Text>
+            <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+              Change Password
+            </Text>
           </TouchableOpacity>
         </View>
         <View style={{ height: "10%" }}>
